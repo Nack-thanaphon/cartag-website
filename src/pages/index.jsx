@@ -22,27 +22,30 @@ const Index = () => {
           placeholder="ค้นหาทะเบียนรถ..."
           className="w-full"
         />
-        <small className="text-slate-400">ทะบียนทั้งหมด <span className="text-blue-300">150,000</span> ขายแล้ว <span className="text-blue-300">400</span> ใบ</small>
+        <small className="text-slate-400">
+          ทะบียนทั้งหมด <span className="text-blue-300">150,000</span> ขายแล้ว{" "}
+          <span className="text-blue-300">400</span> ใบ
+        </small>
         <div className="grid grid-cols-3 gap-2 mt-5">
-          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2">
+          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2 sm:py-5">
             ความรัก
           </button>
-          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2">
+          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2 sm:py-5">
             วันเกิด
           </button>
-          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2">
+          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2 sm:py-5">
             ประจำปี
           </button>
-          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2">
+          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2 sm:py-5">
             ดวงชะตา
           </button>
-          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2">
+          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2 sm:py-5">
             ชื่อย่อ
           </button>
-          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2">
+          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2 sm:py-5">
             ผลรวม
           </button>
-          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2">
+          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2 sm:py-5">
             ประมูล
           </button>
           <button className="col-span-2 border border-1 border-blue-300  text-blue-300 rounded-[10px] py-2">
@@ -52,7 +55,7 @@ const Index = () => {
       </div>
 
       <Tabs defaultValue="new" className="mb-8">
-        <TabsList className="grid w-full grid-cols-5">
+        <TabsList className="grid w-full grid-cols-5 sm:my-[40px]">
           <TabsTrigger value="new">ใหม่ล่าสุด</TabsTrigger>
           <TabsTrigger value="hot">ยอดนิยม</TabsTrigger>
           <TabsTrigger value="suggest">แนะนำ</TabsTrigger>
@@ -75,7 +78,7 @@ const Index = () => {
               <CardTitle>ยอดนิยม</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 gap-2">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
                 <div className="rounded-[20px] border border-1 border-blue-400 p-3">
                   <img
                     src="https://file.chobrod.com/2019/05/02/iO9DezGG/-d843.jpg"
@@ -86,18 +89,12 @@ const Index = () => {
                     ฎฐ 456770
                   </p>
                   <div className="grid grid-cols-1 mb-3">
-                    {/* <p className="text-[0.6rem] mb-1">ผลรวม</p>
-                    <p className="text-[0.8rem] text-bold text-start">89</p> */}
-                    {/* <p className="text-[0.6rem] mb-1">ประเภท</p>
-                    <p className="text-[0.8rem] text-bold text-start">ประมูล</p> */}
                     <p className="text-[0.6rem] mb-1">ราคา</p>
                     <p className="text-[1rem] text-bold text-start">450,000</p>
                     <p className="text-[0.6rem] mb-1">สถานะ</p>
                     <div className="text-[0.8rem] text-bold text-start bg-green-300 w-fit px-3 rounded-[20px] my-2">
                       ว่าง
                     </div>
-                    {/* <p className="text-[0.6rem] mb-1">จำนวนเข้าชม</p>
-                    <p className="text-[0.8rem] text-bold text-start">3,000</p> */}
                   </div>
                   <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] p-2 w-full text-[0.8rem]">
                     อ่านรายละเอียดเพิ่ม
@@ -113,7 +110,7 @@ const Index = () => {
               <CardTitle>ขายแล้ว</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 gap-2">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
                 <div className="relative rounded-[20px] border border-1 border-gray-400 p-3 overflow-hidden">
                   <img
                     src="https://file.chobrod.com/2019/05/02/iO9DezGG/-d843.jpg"
@@ -158,10 +155,33 @@ const Index = () => {
           <Card>
             <CardHeader>
               <CardTitle>รีวิว</CardTitle>
+              <small className="text-slate-300">390 review ผู้ใช้งานจริง</small>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 gap-2">
-                <div className="rounded-[20px] border border-1 border-blue-400 p-4 max-w-md mx-auto">
+                <div className="rounded-[20px] border border-1 border-blue-400 p-4 w-full mx-auto">
+                  <div className="flex justify-between items-center mb-2">
+                    <div className="flex items-center">
+                      <img
+                        src="https://www.shutterstock.com/image-photo/happy-mid-aged-business-woman-600nw-2353012835.jpg"
+                        alt="User Avatar"
+                        className="w-10 h-10 rounded-full mr-3 object-cover"
+                      />
+                      <div>
+                        <p className="font-bold">John Doe</p>
+                        <p className="text-sm text-gray-500">March 10, 2023</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-yellow-500">★★★★☆</span>
+                    <p className="ml-2 text-sm text-gray-500">(4/5)</p>
+                  </div>
+                  <p className="text-gray-700">
+                    ใช้งานง่าย สะดวก และรวดเร็ว แอดมินไว
+                  </p>
+                </div>
+                <div className="rounded-[20px] border border-1 border-blue-400 p-4 w-full mx-auto">
                   <div className="flex justify-between items-center mb-2">
                     <div className="flex items-center">
                       <img
@@ -187,10 +207,9 @@ const Index = () => {
             </CardContent>
           </Card>
         </TabsContent>
-        {/* เพิ่ม TabsContent สำหรับแท็บอื่นๆ ตามต้องการ */}
       </Tabs>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4">
         <div className="mt-2">
           <div className="mr-2 mb-2">
             <p className="text-nowrap">เรียงตาม :</p>
@@ -211,7 +230,7 @@ const Index = () => {
           <CardHeader>
             <CardTitle>ป้ายทะเบียนทั้งหมด</CardTitle>
           </CardHeader>
-          <div className="grid grid-cols-2 gap-3 p-2">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 p-2">
             <div className="rounded-[10px] border border-1 border-blue-400 p-2">
               <div className="flex gap-2">
                 <small className="bg-slate-300 p-1 rounded-[10px] text-[0.5rem]">
@@ -315,6 +334,35 @@ const Index = () => {
           </div>
         </Card>
       </div>
+      <footer className="bg-gray-800 text-white  mt-8">
+        <div className="container mx-auto text-center">
+          <div className="grid sm:grid-cols-4 grid-cols-1 gap-3 mb-3 p-3">
+            <div className="sm:col-span-1">
+              <img
+                className="w-full"
+                src="https://thai-trademark.com/wp-content/uploads/2018/03/%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%98%E0%B8%B8%E0%B8%A3%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B9%89%E0%B8%B2-1.jpg"
+                alt=""
+              />
+            </div>
+            <div className="sm:col-span-3 text-start">
+              <h3 className="">
+                Cartag Inc. - Innovating the Future of Transportation
+                <p className="text-sm text-gray-600 mt-2">
+                  At Cartag Inc., we are dedicated to revolutionizing the way
+                  people move. Our cutting-edge technology and innovative
+                  solutions are designed to make transportation safer, more
+                  efficient, and environmentally friendly.
+                </p>
+              </h3>
+            </div>
+          </div>
+          <div className="py-4 bg-blue-400">
+            <p className="text-sm ">
+              &copy; 2023 Your Company. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
