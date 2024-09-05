@@ -8,8 +8,12 @@ const Index = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8 text-center">
+        <img
+          className="object-cover rounded-full w-[100px]  mx-auto my-5"
+          src="https://static.vecteezy.com/system/resources/previews/006/842/439/non_2x/car-auto-logo-sign-design-free-vector.jpg"
+          alt=""
+        />
         <h1 className="text-4xl font-bold text-center">ทะเบียนเด่น</h1>
-        <small>Cartag-fast-track</small>
       </div>
 
       <div className="mb-8">
@@ -18,6 +22,7 @@ const Index = () => {
           placeholder="ค้นหาทะเบียนรถ..."
           className="w-full"
         />
+        <small className="text-slate-400">ทะบียนทั้งหมด <span className="text-blue-300">150,000</span> ขายแล้ว <span className="text-blue-300">400</span> ใบ</small>
         <div className="grid grid-cols-3 gap-2 mt-5">
           <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white rounded-[10px] py-2">
             ความรัก
